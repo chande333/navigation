@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Framwork APP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="superapp">
+    <link rel='icon' href='Assets/waves.png'>
+    <link rel="stylesheet" href="CSS/main.css">
+
+    <script type="text/javascript">
+    	let vars = {};
+        let parts = window.location.href.replace(/[?&]+([^=&]+)=?([^&]*)/gi,function(m,key,value){ vars[key] = value; });
+        let version = "?_=" +Date.now();
+
+        let newScript = document.createElement("script");
+        newScript.type = "module";
+        newScript.src = `Scripts/Main.js${version}`;
+        document.head.appendChild(newScript);  
+    </script>
+
+
+</head>
+
+<body onload="Main.init()">
+
+    <header>
+        <h1>Raw Data</h1>
+    </header>
+
+    <nav></nav>
+    <main></main>
+
+</body>
+</html>
+
